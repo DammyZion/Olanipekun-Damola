@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blue
+}
+.container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.header{
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.message{
+    color: #0f0;
+    font-size: 40px;
+    font-weight: 900;
+    
+}
+.me{
+    font-size: 40px;
+    color: #fff;
+}
+.you{
+    font-size: 40px;
+    color: #fff;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1em;
+}
+.card{
+    height: 100px;
+    width: 90px;
+    background-color: #ff0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition:0.3s all ease;
+    display: grid;
+    place-items: center;
+    
+}
+.card:hover {
+    transform: scale(1.03);
+}
+.card img{
+    width: 75px;
+    height: 75px;
+    transition:0.3s all ease;
+    opacity: 0;
+    
+}
+.card.clicked{
+    background-color: orange;
+}
+.card.checked{
+    background-color: aqua;
+}
+.card.clicked img,
+.card.checked img{
+    opacity: 1;
+}
+.card.remove{
+    width: 75px;
+    height: 75px;
+    transition:0.3s all ease;
+    opacity: 0;
+}
+.card.shake{
+    background-color: #f00;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    
+}
